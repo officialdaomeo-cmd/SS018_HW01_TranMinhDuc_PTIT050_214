@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/hoangit330/dummy-config-repo # You should change this to a real repo
+          default-label: main
+          clone-on-start: true
+          # local:
+          #   searchLocations: file://${user.dir}/config-repo
